@@ -6,10 +6,10 @@
 
 "use strict"
 
-function calculateAreaOfTriangle() {
+function calculatesalary() {
   // input
-  const baselength = parseInt(document.getElementById('base-length').value)
-  const heightlength = parseInt(document.getElementById('height-length').value)
+  const hoursworked = parseInt(document.getElementById('hours-worked').value)
+  const hourlywage = parseInt(document.getElementById('hourly-wage').value)
 
   // process
     const areaOfTriangle = (baselength * heightlength) /2
