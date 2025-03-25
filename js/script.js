@@ -8,15 +8,16 @@
 
 function calculatesalary() {
   // input
-  const hoursworked = parsefloat(document.getElementById('hours-worked').value)
-  const hourlywage = parseFloat(document.getElementById('hourly-wage').value)
+  const hoursworked = parseFloat(document.getElementById('hours-worked').value);
+  const hourlywage = parseFloat(document.getElementById('hourly-wage').value);
+    
 
   // process
-    const salaryweekly = (hoursworked * hourlywage) * (1.00 * 0.18)
+    const salaryweekly = (hoursworked * hourlywage) * (1.00 - 0.18)
     const incometax = (hoursworked * hourlywage) * 0.18
 
   // output
-  document.getElementById('salary').innerHTML = `Your pay will be: $ ${salaryweekly.toFixed(2)}`
-  document.getElementById('incometax').innerHTML = `The Government will take: $ ${incometax.toFixed(2)}`
+  document.getElementById('salary').innerHTML = 'Your pay will be: $' +  salaryweekly.toFixed(2)
+  document.getElementById('incometax').innerHTML = 'The Government will take: $' + incometax.toFixed(2)
 }
 
