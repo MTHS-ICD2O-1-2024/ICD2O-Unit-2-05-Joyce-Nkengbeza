@@ -8,13 +8,15 @@
 
 function calculatesalary() {
   // input
-  const hoursworked = parseInt(document.getElementById('hours-worked').value)
-  const hourlywage = parseInt(document.getElementById('hourly-wage').value)
+  const hoursworked = parsefloat(document.getElementById('hours-worked').value)
+  const hourlywage = parseFloat(document.getElementById('hourly-wage').value)
 
   // process
-    const areaOfTriangle = (baselength * heightlength) /2
+    const salaryweekly = (hoursworked * hourlywage) * (1.00 * 0.18)
+    const incometax = (hoursworked * hourlywage) * 0.18
 
   // output
-  document.getElementById('area').innerHTML = 'Area is: ' + areaOfTriangle + ' cm²'
+  document.getElementById('salary').innerHTML = `Your pay will be: $ ${salaryweekly.toFixed(2)}`
+  document.getElementById('incometax').innerHTML = `The Government will take: $ ${incometax.toFixed(2)}`
 }
 
